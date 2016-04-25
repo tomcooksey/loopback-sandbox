@@ -31,5 +31,25 @@
   "Role": {
     "dataSource": "db",
     "public": false
-  }
+  },
+  "MenuItem": {
+    "dataSource": "mysql",
+    "public": true
+  },
+    "ItemsToItems": {
+        "dataSource": "mysql",
+        "public": true
+    },
+    "Advert": {
+        "dataSource": "mysql",
+        "public": true
+    },
+    "AdvertI18N": {
+        "dataSource": "mysql",
+        "public": true
+    },
+    "Language": {
+        "dataSource": "mysql",
+        "public": true
+    }
 }

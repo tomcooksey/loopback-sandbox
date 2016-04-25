@@ -1,0 +1,34 @@
+{
+  "name": "ItemsToItems",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "item_id": {
+      "type": "number"
+    },
+    "linked_item_id": {
+      "type": "number"
+    },
+    "order": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "item": {
+      "type": "belongsTo",
+      "model": "MenuItem",
+      "foreignKey": "linked_item_id"
+    },
+    "parent": {
+      "type": "belongsTo",
+      "model": "MenuItem",
+      "foreignKey": "item_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

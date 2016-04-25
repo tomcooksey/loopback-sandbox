@@ -1,0 +1,39 @@
+{
+  "name": "AdvertI18N",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "Cache": {
+      "cacheGroups": [
+        "adverts"
+      ],
+      "name": "AdvertI18N"
+    }
+  },
+  "properties": {
+    "advert_id": {
+      "type": "number",
+      "required": true
+    },
+    "language_id": {
+      "type": "number",
+      "required": true
+    },
+    "translation_status": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

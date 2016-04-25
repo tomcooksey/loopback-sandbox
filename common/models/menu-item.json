@@ -1,0 +1,58 @@
+{
+  "name": "MenuItem",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "scope": {
+    "include": [
+      "related"
+    ]
+  },
+    "mixins": {
+        "Ownership": true,
+        "Permissions": true
+    },
+  "properties": {
+    "price": {
+      "type": "string"
+    },
+      "category_id": {
+          "type": "number"
+      },
+      "organisation_id": {
+          "type": "number"
+      },
+      "price_type": {
+          "type": "string"
+      },
+      "gluten_free": {
+          "type": "boolean"
+      },
+      "vegetarian": {
+          "type": "boolean"
+      },
+      "fish": {
+          "type": "boolean"
+      },
+      "item_type": {
+          "type": "string"
+      },
+      "short_name": {
+          "type": "string"
+      }
+  },
+  "validations": [],
+  "relations": {
+    "related": {
+      "type": "hasMany",
+      "model": "MenuItem",
+      "foreignKey": "linked_item_id",
+      "through": "ItemsToItems",
+      "keyThrough": "item_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
